@@ -4,40 +4,34 @@ html, body {
   margin: 0;
   padding: 0; }
 
-.header-box1 {
-  display: flex;
-  flex-basis: 20%;
-  font-family: montserrat; }
-
-.header-box2 {
-  margin-left: 300px;
-  flex-direction: row;
-  display: flex;
-  padding: 10px; }
-
-.header-box3 {
-  background-image: url("../images/topdiv/YM_UrbanPlanet_Logo-Black_500x.png");
-  display: flex;
-  flex-basis: 350px;
-  background-size: 200px 30px;
-  background-repeat: no-repeat;
-  margin: 5px; }
-
 td:hover {
   cursor: pointer;
   background-color: blue; }
 
-.main-header {
-  height: 50px;
-  background-color: red; }
+.main-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  flex-wrap: wrap;
+  width: 100%; }
 
-@media (min-width: 768px) {
-  .main-header {
-    background-color: blue;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; } }
+.main-header-container > div {
+  margin: 5px;
+  text-align: center; }
 
-.headerTable {
-  border-spacing: 15px; }
+.headerTable tr {
+  display: flex;
+  flex-wrap: wrap; }
+
+.header-box1 {
+  background-image: url("../images/topdiv/YM_UrbanPlanet_Logo-Black_500x.png");
+  background-size: 200px 30px;
+  background-repeat: no-repeat;
+  flex-basis: 250px; }
+
+.header-box2 {
+  flex-basis: 500px; }
+
+.header-box3 {
+  flex-basis: 200px; }
