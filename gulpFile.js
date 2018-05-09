@@ -16,7 +16,7 @@ gulp.watch     - Watch files and folders for changes
 
 //Default task
 //Minify removed from the array since we are doing it to the main.js
-gulp.task('default', ['message','copyHtml','imgMin','scripts','sass']);
+gulp.task('default', ['message','copyHtml','imgMin','scripts','sass', 'watch']);
 
 
 //Logs message
