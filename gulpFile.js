@@ -16,7 +16,7 @@ gulp.watch     - Watch files and folders for changes
 
 //Default task
 //Minify removed from the array since we are doing it to the main.js
-gulp.task('default', ['message','copyHtml','imgMin','scripts','sass', 'watch']);
+gulp.task('default', ['message','copyHtml','imgMin','scripts','sass', 'watch','copyJS']);
 
 
 //Logs message
@@ -29,6 +29,14 @@ gulp.task('copyHtml',function(){
     gulp.src('src/*.html')
     .pipe(gulp.dest('dist'));
 });
+
+
+//Copy all JavaScript files
+gulp.task('copyJS',function(){
+    gulp.src('src/js/*.js')
+    .pipe(gulp.dest('dist/js'));
+});
+
 
 //Optimize Images
 gulp.task('imgMin', () =>

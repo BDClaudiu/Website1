@@ -27,10 +27,17 @@ td:hover {
 .supportContainer {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
   width: 100%;
-  background-color: black; }
+  height: 150px;
+  background-color: black;
+  padding-left: 350px;
+  padding-right: 350px; }
+
+.supportContainer img {
+  height: 100px; }
 
 .main-header-container > div {
   line-height: 40px; }
@@ -91,9 +98,16 @@ td:hover {
 .divID6 table {
   width: 100%; }
 
+.divID6 table td {
+  padding-left: 15px; }
+
+.divID6 table tr {
+  display: flex;
+  flex-wrap: wrap; }
+
 .divID6 table img {
-  height: 460px;
-  width: 100%; }
+  height: 400px;
+  width: 250px; }
 
 .divID7 {
   width: 100%;
@@ -137,3 +151,28 @@ td:hover {
   width: 25%;
   float: left;
   justify-content: end; }
+
+.infoTableDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
+.infoTable {
+  border-collapse: collapse;
+  width: 80%; }
+
+.infoTable tr {
+  border: 1px solid black; }
+
+.infoTable td {
+  border: 1px solid black;
+  height: 30px;
+  padding-right: 40px;
+  width: 200px;
+  padding-top: 20px; }
+
+.footerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45%; }
