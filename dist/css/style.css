@@ -92,11 +92,12 @@ td:hover {
   width: 420px; }
 
 .divID6 {
-  width: 100%;
-  margin-top: 100px; }
+  width: 100%; }
 
 .divID6 table {
-  width: 100%; }
+  width: 100%;
+  padding-top: 50px;
+  margin-bottom: 60px; }
 
 .divID6 table td {
   padding-left: 15px; }
@@ -106,18 +107,18 @@ td:hover {
   flex-wrap: wrap; }
 
 .divID6 table img {
-  height: 400px;
+  height: 350px;
   width: 250px; }
 
 .divID7 {
-  width: 100%;
-  margin-top: 100px; }
-
-.divID7 table {
   width: 100%; }
 
+.divID7 table {
+  width: 100%;
+  margin-bottom: 60px; }
+
 .divID7 table img {
-  height: 460px;
+  height: 350px;
   width: 100%; }
 
 .divID8 {
