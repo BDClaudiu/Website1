@@ -3,7 +3,8 @@ var slideIndex = [1,1];
 var slideId = ["mySlides1", "mySlides2"];
 var slideIndexOne = 0;
 
-showSlides2();
+
+showSlidesOne();
 showSlides(1, 0);
 showSlides(1, 1);
 
@@ -32,15 +33,18 @@ function showSlides(n, no) {
   dots[slideIndex[no]-1].className += " active";
 }
 
-function showSlides2() {
+
+function showSlidesOne() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
+    
     for (i = 0; i < slides.length; i++) {
        slides[i].style.display = "none";  
     }
-    if (slideIndexOne > slides.length) {slideIndexOne = 0}    
     slideIndexOne++;
+    if (slideIndex > slides.length) {slideIndexOne = 1}    
+    
     slides[slideIndexOne-1].style.display = "block";  
-   
-    setTimeout(showSlides2, 2000); // Change image every 2 seconds
+    
+    setTimeout(showSlidesOne, 2000); // Change image every 2 seconds
 }
