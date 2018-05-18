@@ -23,6 +23,17 @@ td:hover {
   width: 100%;
   background-color: white; }
 
+.cathegorySelection {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.cathegorySelection table {
+  display: none; }
+
 .supportContainer {
   display: flex;
   flex-direction: row;
