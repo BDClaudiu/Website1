@@ -44,7 +44,12 @@
         <div class="header-box3">
             <table class="headerTable2">
                 <tr>
-                    <td><button>search</button> </td>
+                    <td>    
+                        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                            <input type="text" placeholder="Search" name="search" id="searchTopInputBar">
+                            <button type="button" id="searchTopBtn" onmouseover="btnSearch(this)" >Search</button>
+                         </form> 
+                    </td>
                     <td><button>login</button></td>
                     <td><button>cart</button></td>
                 </tr>
@@ -419,46 +424,50 @@
         <div class="infoTableDiv">
         <table class="infoTable">
             <tr>
-                <td>Company</td>
-                <td>Service</td>
-                <td>Support</td>
+                <td><span>Company</span></td>
+                <td><span>Service</span></td>
+                <td><span>Support</span></td>
                 <td>Never Miss A Sale</td>
             </tr>
             <tr>
-                <td>About Us</td>
-                <td>Shopping Methods</td>
-                <td>Tracking Packages</td>
-                <td>Sign-up to our mailing list for advanced notice of sales, exclusive deals, and more!</td>
+                <td><span>About Us</span></td>
+                <td><span>Shopping Methods</span></td>
+                <td><span>Tracking Packages</span></td>
+                <td>Sign-up to our mailing list for notice of sales, exclusive deals, and more!</td>
             </tr>   
             <tr>
-                <td>Careers</td>
-                <td>Returns and Exchanges</td>
-                <td>Order Status</td>
-                <td></td>
+                <td><span>Careers</span></td>
+                <td><span>Returns and Exchanges</span></td>
+                <td><span>Order Status</span></td>
+                <td><form action="/action_page.php">
+                    <br>
+                    <input type="text" name="signUpInput" placeholder="YOUR EMAIL">
+                    <span><input type="submit" value="Sign Up"></span>
+                  </form> </td>
             </tr> 
             <tr>
-                <td>Affilities</td>
-                <td>Ship to Store</td>
-                <td>Find a Store</td>
+                <td><span>Affilities</span></td>
+                <td><span>Ship to Store</span></td>
+                <td><span>Find a Store</span></td>
                 <td></td>
             </tr> 
 
             <tr>
                 <td></td>
-                <td>FAQ</td>
-                <td>Account</td>   
+                <td><span>FAQ</span></td>
+                <td><span>Account</span></td>   
                 <td></td>
             </tr> 
             <tr>
                 <td></td>
-                <td>Size Charts</td>
-                <td>Buy a Gift Card</td>
+                <td><span>Size Charts</span></td>
+                <td><span>Buy a Gift Card</span></td>
                 <td></td>
             </tr> 
             <tr>
                 <td></td>
-                <td>Contact Us</td>
-                <td>Check Your Gift Card Balance</td> 
+                <td><span>Contact Us</span></td>
+                <td><span>Check Your Gift Card Balance</span></td> 
                 <td></td>
             </tr> 
         </table>

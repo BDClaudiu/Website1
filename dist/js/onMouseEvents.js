@@ -1,4 +1,11 @@
 
+function btnSearch(buttonID)
+{   
+    $("#".concat(buttonID.id)).focus(function(){
+        $("#searchTopInputBar").css("display","block");
+    });
+}
+
 function onMouseEvents(cathegoryID)
 {
 
