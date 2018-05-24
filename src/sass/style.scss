@@ -11,18 +11,6 @@ td:hover{
 }
 
 
-input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    display:none;
-}
-
-
-
-
 .infoTable td:hover{
     cursor: default;
 }
@@ -51,17 +39,27 @@ input[type=text] {
     z-index: 2;
 }
 .cathegorySelection{
-    margin-top: 45px;
+    margin-top: 30px;
     display:flex;
     flex-direction: row;
     position:fixed;
     flex-wrap: wrap;
-    width: 100%;
-    
+    width: 100%;    
+    z-index: 3;
+
+}
+
+.cathegorySelection >div
+{
+   line-height: 40px ;
 }
 
 .cathegorySelection table{
     display:none;
+}
+
+.cathegorySelection td{
+    padding-right:25px;
 }
 
 
@@ -82,10 +80,7 @@ input[type=text] {
     height:70px;
 }
 
-.main-header-container >div
-{
-   line-height: 40px ;
-}
+
 
 .headerTable{
     display:flex;
@@ -102,13 +97,30 @@ input[type=text] {
 .headerTable2{
     display:flex;
     flex-direction: row-reverse;
+    
 }
 
 .headerTable2 tr
 {
     display:flex;
     flex-wrap: wrap;
+    position:fixed;
+    top:0px;
+    right:0px;
 }
+
+
+.headerTable2 input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 250px;
+    height:35px;
+    display:none;
+}
+
+
 
 .headerTable tr td {
     padding-right: 25px;
@@ -236,10 +248,11 @@ input[type=text] {
     
     width:25%;
     float:left;
-    
     justify-content: end;
-
 }
+
+
+
 
 .infoTableDiv{
     display:flex;

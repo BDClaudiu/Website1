@@ -7,14 +7,6 @@ html, body {
 td:hover {
   cursor: pointer; }
 
-input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  display: none; }
-
 .infoTable td:hover {
   cursor: default; }
 
@@ -39,15 +31,22 @@ input[type=text] {
   z-index: 2; }
 
 .cathegorySelection {
-  margin-top: 45px;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   position: fixed;
   flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  z-index: 3; }
+
+.cathegorySelection > div {
+  line-height: 40px; }
 
 .cathegorySelection table {
   display: none; }
+
+.cathegorySelection td {
+  padding-right: 25px; }
 
 .supportContainer {
   display: flex;
@@ -64,9 +63,6 @@ input[type=text] {
 .supportContainer img {
   height: 70px; }
 
-.main-header-container > div {
-  line-height: 40px; }
-
 .headerTable {
   display: flex;
   flex-direction: row-reverse; }
@@ -81,7 +77,19 @@ input[type=text] {
 
 .headerTable2 tr {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0px;
+  right: 0px; }
+
+.headerTable2 input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 250px;
+  height: 35px;
+  display: none; }
 
 .headerTable tr td {
   padding-right: 25px; }
