@@ -1,281 +1,239 @@
+
+
+$container-width:100%;
+
 html, body{
-	width:100%;
+	width: $container-width;
     height:100%;
     margin: 0px;
     padding: 0px;
-}
-
-td:hover{
-    cursor: pointer;
-   
-}
-
-
-.infoTable td:hover{
-    cursor: default;
-}
-
-.infoTable span:hover{
-    cursor: pointer;
 }
 
 *{
     box-sizing: border-box;
 }
 
-.main-container{
+//Default direction is row
+@mixin flexDisplayDirection( $direction:row){
     display:flex;
-    flex-direction: column;    
+    flex-direction: $direction;
 }
-
-.main-header-container{
+//Default value for  flex-direction is row and for flex-wrap is wrap 
+@mixin flexDisplayDirectionAndWrap( $direction:row, $wrap:wrap){  
     display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: fixed;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: white;
-    z-index: 2;
-}
-.cathegorySelection{
-    margin-top: 30px;
-    display:flex;
-    flex-direction: row;
-    position:fixed;
-    flex-wrap: wrap;
-    width: 100%;    
-    z-index: 3;
-
+    flex-direction: $direction;
+    flex-wrap: $wrap;
 }
 
-.cathegorySelection >div
-{
-   line-height: 40px ;
-}
-
-.cathegorySelection table{
-    display:none;
-}
-
-.cathegorySelection td{
-    padding-right:25px;
-}
-
-
-.supportContainer
-{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    height:82px;
-    background-color: black;
-    padding-left: 350px;
-    padding-right: 350px;
-}
-.supportContainer img {
-    height:70px;
-}
-
-
-
-.headerTable{
-    display:flex;
-    flex-direction: row-reverse;
-}
-
-
-.headerTable tr
-{
-    display:flex;
-    flex-wrap: wrap;
-}
-
-.headerTable2{
-    display:flex;
-    flex-direction: row-reverse;
-    
-}
-
-.headerTable2 tr
-{
-    display:flex;
-    flex-wrap: wrap;
-    position:fixed;
-    top:0px;
-    right:0px;
-}
-
-
-.headerTable2 input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: none;
-    float: left;
-    width: 250px;
-    height:35px;
-    display:none;
-}
-
-
-
-.headerTable tr td {
-    padding-right: 25px;
-}
-
-.divID2{
-    
-    margin-top:60px;
-}
-.divID3{
-    width: 100%;
-}
-.divID3 img {
-    height: 420px;
-    width:100%;
-    
-}
-.divID4 {
-    width: 100%;
-}
-.divID4 table img {
-    height: 420px;
-    width:600px;
-    
-}
-.divID4 table {
-    width: 100%;
-}
-
-.divID5{
-    width: 100%;
-}
-
-.divID5 table{
-    width: 100%;
-}
-
-.divID5 table img
-{
-    height:460px;
-    width:420px;
-}
-
-.divID6{
-    width: 100%;
-
-}
-
-.divID6 table {
-    width:100%;
-    padding-top:50px;
-    margin-bottom: 60px;
-}
-
-.divID6 table td{
-    padding-left:15px;
-    
-}
-.divID6 table tr{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.divID6 table img
-{
-    height:350px;
-    width:250px;
-}
-
-.divID7{
-    width: 100%;
-    
-}
-
-.divID7 table {
-    width:100%;
-    margin-bottom: 60px;
-}
-
-.divID7 table img
-{
-    height:350px;
-    width:100%;
-}
-
-
-
-.divID8{
-    width: 100%;
-    margin-top:100px;
-}
-
-.divID8 table {
-    width:100%;
-}
-
-.divID8 table img
-{
-    height:250 px;
-    width:100%;
-}
-
-
-.header-box1 {   
-    padding-top:5px;
-    background-size: 200px 30px;
-    background-repeat: no-repeat;
-    width:15%;
-}
-
-
-.header-box1 img {
-    width:150px;
-    height:20px;
-    margin-top: 10px;
-    margin-left: 25px;
-}
-
-.header-box2{
-    
-    width:60%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.header-box3{
-    
-    width:25%;
-    float:left;
-    justify-content: end;
-}
-
-
-
-
-.infoTableDiv{
-    display:flex;
-    justify-content: center;
-    width:100%;
+td:hover{
+    cursor: pointer;
 }
 
 .infoTable{
     border-collapse: collapse;
     width: 65%;
     font-size: 13px;
+
+    td {
+        height: 30px;
+        width:220px;
+        padding-top:10px;
+     }
+    
+    td:hover{
+        cursor: default;
+    }
+    
+    span:hover{
+        cursor: pointer;
+    }
 }
 
- .infoTable td {
-    height: 30px;
-    width:220px;
-    padding-top:10px;
- }
+.main-container{
+@include flexDisplayDirection(column);
+}
+
+.main-header-container{
+    @include flexDisplayDirectionAndWrap;
+    width: $container-width;
+    justify-content: flex-end;
+    position: fixed;
+    background-color: white;
+    z-index: 2;
+}
+.cathegorySelection{
+    @include flexDisplayDirectionAndWrap;
+    width: $container-width;
+    margin-top: 30px;
+    position:fixed;
+    z-index: 3;
+
+    div{
+        line-height: 40px;
+    }
+
+    table{
+        display:none;
+    }
+
+    td{
+        padding-right:25px;
+    }
+}
+
+.supportContainer
+{
+    @include flexDisplayDirectionAndWrap;
+    width: $container-width;
+    justify-content: space-between;
+    align-items: center;
+    height:82px;
+    background-color: black;
+    padding-left: 350px;
+    padding-right: 350px;
+
+    img {
+        height:70px;
+    }
+}
+
+.headerTable{
+    @include flexDisplayDirection(row-reverse);
+    tr{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    td{
+        padding-right: 25px;
+    }
+}
+
+.headerTable2{
+    @include flexDisplayDirection(row-reverse);
+    tr{
+        display:flex;
+        flex-wrap: wrap;
+        position:fixed;
+        top:0px;
+        right:0px;
+    }
+    input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: none;
+        float: left;
+        width: 250px;
+        height:35px;
+        display:none;
+    }    
+}
+
+.divID2{    
+    margin-top:60px;
+}
+
+// Any container that needs width 100% goes here
+.divID3, .divID4, .divID5, .divID6, .divID7, .divID8 table{
+    width: $container-width;
+}
+
+.divID3 img {
+    height: 420px;
+    width: $container-width;
+}
+
+.divID4 table {
+    width: $container-width;
+
+    img {
+        height: 420px;
+        width:600px;    
+    }
+}
+
+.divID5 table{
+    width: $container-width;
+
+    img{       
+        height:460px;
+        width:420px;
+    }
+}
+
+.divID6 table {
+    width: $container-width;
+    padding-top:50px;
+    margin-bottom: 60px;
+
+    td{
+        padding-left:15px;        
+    }
+    tr{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    img{
+        height:350px;
+        width:250px;
+    }
+}
+
+.divID7 table {
+    width: $container-width;
+    margin-bottom: 60px;
+    
+    img{
+        height:350px;
+        width: $container-width;
+    }
+}
+
+.divID8{
+    width: $container-width;
+    margin-top:100px;
+
+    table img{
+        height:250 px;
+        width: $container-width;
+    }
+}
+
+.header-box1 {   
+    padding-top:5px;
+    background-size: 200px 30px;
+    background-repeat: no-repeat;
+    width:15%;
+
+    img {
+        width:150px;
+        height:20px;
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+}
+
+.header-box2{    
+    width:60%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-box3{    
+    width:25%;
+    float:left;
+    justify-content: end;
+}
+
+.infoTableDiv{
+    display:flex;
+    justify-content: center;
+    width: $container-width;
+}
     
  .footerDiv
  {
-     display:flex;
-    flex-direction: row;
+    @include flexDisplayDirection;
     justify-content: space-between;
     width: 45%;
     padding-top: 25px;

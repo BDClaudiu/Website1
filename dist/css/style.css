@@ -4,17 +4,24 @@ html, body {
   margin: 0px;
   padding: 0px; }
 
+* {
+  box-sizing: border-box; }
+
 td:hover {
   cursor: pointer; }
 
-.infoTable td:hover {
-  cursor: default; }
-
-.infoTable span:hover {
-  cursor: pointer; }
-
-* {
-  box-sizing: border-box; }
+.infoTable {
+  border-collapse: collapse;
+  width: 65%;
+  font-size: 13px; }
+  .infoTable td {
+    height: 30px;
+    width: 220px;
+    padding-top: 10px; }
+  .infoTable td:hover {
+    cursor: default; }
+  .infoTable span:hover {
+    cursor: pointer; }
 
 .main-container {
   display: flex;
@@ -23,159 +30,128 @@ td:hover {
 .main-header-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  position: fixed;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: flex-end;
+  position: fixed;
   background-color: white;
   z-index: 2; }
 
 .cathegorySelection {
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
-  position: fixed;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 30px;
+  position: fixed;
   z-index: 3; }
-
-.cathegorySelection > div {
-  line-height: 40px; }
-
-.cathegorySelection table {
-  display: none; }
-
-.cathegorySelection td {
-  padding-right: 25px; }
+  .cathegorySelection div {
+    line-height: 40px; }
+  .cathegorySelection table {
+    display: none; }
+  .cathegorySelection td {
+    padding-right: 25px; }
 
 .supportContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
   height: 82px;
   background-color: black;
   padding-left: 350px;
   padding-right: 350px; }
-
-.supportContainer img {
-  height: 70px; }
+  .supportContainer img {
+    height: 70px; }
 
 .headerTable {
   display: flex;
   flex-direction: row-reverse; }
-
-.headerTable tr {
-  display: flex;
-  flex-wrap: wrap; }
+  .headerTable tr {
+    display: flex;
+    flex-wrap: wrap; }
+  .headerTable td {
+    padding-right: 25px; }
 
 .headerTable2 {
   display: flex;
   flex-direction: row-reverse; }
-
-.headerTable2 tr {
-  display: flex;
-  flex-wrap: wrap;
-  position: fixed;
-  top: 0px;
-  right: 0px; }
-
-.headerTable2 input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: none;
-  float: left;
-  width: 250px;
-  height: 35px;
-  display: none; }
-
-.headerTable tr td {
-  padding-right: 25px; }
+  .headerTable2 tr {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0px;
+    right: 0px; }
+  .headerTable2 input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 250px;
+    height: 35px;
+    display: none; }
 
 .divID2 {
   margin-top: 60px; }
 
-.divID3 {
+.divID3, .divID4, .divID5, .divID6, .divID7, .divID8 table {
   width: 100%; }
 
 .divID3 img {
   height: 420px;
   width: 100%; }
 
-.divID4 {
-  width: 100%; }
-
-.divID4 table img {
-  height: 420px;
-  width: 600px; }
-
 .divID4 table {
   width: 100%; }
-
-.divID5 {
-  width: 100%; }
+  .divID4 table img {
+    height: 420px;
+    width: 600px; }
 
 .divID5 table {
   width: 100%; }
-
-.divID5 table img {
-  height: 460px;
-  width: 420px; }
-
-.divID6 {
-  width: 100%; }
+  .divID5 table img {
+    height: 460px;
+    width: 420px; }
 
 .divID6 table {
   width: 100%;
   padding-top: 50px;
   margin-bottom: 60px; }
-
-.divID6 table td {
-  padding-left: 15px; }
-
-.divID6 table tr {
-  display: flex;
-  flex-wrap: wrap; }
-
-.divID6 table img {
-  height: 350px;
-  width: 250px; }
-
-.divID7 {
-  width: 100%; }
+  .divID6 table td {
+    padding-left: 15px; }
+  .divID6 table tr {
+    display: flex;
+    flex-wrap: wrap; }
+  .divID6 table img {
+    height: 350px;
+    width: 250px; }
 
 .divID7 table {
   width: 100%;
   margin-bottom: 60px; }
-
-.divID7 table img {
-  height: 350px;
-  width: 100%; }
+  .divID7 table img {
+    height: 350px;
+    width: 100%; }
 
 .divID8 {
   width: 100%;
   margin-top: 100px; }
-
-.divID8 table {
-  width: 100%; }
-
-.divID8 table img {
-  height: 250 px;
-  width: 100%; }
+  .divID8 table img {
+    height: 250 px;
+    width: 100%; }
 
 .header-box1 {
   padding-top: 5px;
   background-size: 200px 30px;
   background-repeat: no-repeat;
   width: 15%; }
-
-.header-box1 img {
-  width: 150px;
-  height: 20px;
-  margin-top: 10px;
-  margin-left: 25px; }
+  .header-box1 img {
+    width: 150px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 25px; }
 
 .header-box2 {
   width: 60%;
@@ -190,16 +166,6 @@ td:hover {
   display: flex;
   justify-content: center;
   width: 100%; }
-
-.infoTable {
-  border-collapse: collapse;
-  width: 65%;
-  font-size: 13px; }
-
-.infoTable td {
-  height: 30px;
-  width: 220px;
-  padding-top: 10px; }
 
 .footerDiv {
   display: flex;

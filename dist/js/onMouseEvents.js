@@ -15,9 +15,7 @@ function btnSearch(buttonID)
         }
         $(this).data("clicks", !clicks);
       });
-    
 }
-
 
 function onMouseEvents(cathegoryID)
 {
