@@ -1,0 +1,28 @@
+.galleryOptions{
+  padding-top:75px;
+}
+
+.displayListStyle{
+  list-style-type: circle;
+}
+
+.listOptions{
+  display:flex;
+  background-color: lightgrey;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.listOptions li {
+  padding:15px;
+}
+
+ #blue::before{
+  content:"\2022";
+  color:red;
+  font-size: 40px;
+  display:inline-block;
+  width:20px;
+  margin-left:-1px;
+}

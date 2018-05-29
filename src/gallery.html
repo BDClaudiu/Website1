@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/slideShows.js"></script>
+    <script src="js/onMouseEvents.js"></script>
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/gallery.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/slideShow2.css" />
+</head>
+<body>
+    <div class="main-container">
+
+
+            <div class="main-header-container">
+            
+                    <div class="header-box1" >
+                        <img src="images/topdiv/YM_UrbanPlanet_Logo-Black_500x.png" alt="Mountain View">  
+                    </div>
+                   
+            
+                    <div class="header-box2">
+                        <table class="headerTable">
+                            <tr>
+                            <td id="newCathegory" onmouseover="onMouseEvents(this)">NEW</td>
+                            <td id="womensCathegory" onmouseover="onMouseEvents(this)" >WOMENS</td>
+                            <td id="mensCathegory" onmouseover="onMouseEvents(this)">MENS</td>
+                            <td id="girlsCathegory" onmouseover="onMouseEvents(this)">GIRLS</td>
+                            <td id="boysCathegory" onmouseover="onMouseEvents(this)">BOYS</td>
+                            <td id="beautyCathegory" onmouseover="onMouseEvents(this)">BEAUTY</td>
+                            <td id="homeCathegory" onmouseover="onMouseEvents(this)">HOME</td>
+                            <td id="saleCathegory" onmouseover="onMouseEvents(this)">SALE</td>  
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="header-box3">
+                        <table class="headerTable2">
+                            <tr>
+                                <td> <button type="button" id="searchTopBtn" onmouseover="btnSearch(this)" >Search</button></td>
+                                <td><button>login</button></td>
+                                <td><button>cart</button></td>
+                            </tr>
+            
+                            <tr>
+                                <td>    
+                                <form class="example" action="js/main.js" style="margin:auto;max-width:300px">
+                                    <input type="text" placeholder="Search" name="search" id="searchTopInputBar">
+                                   
+                                 </form> 
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                
+            
+                        <div class="cathegorySelection" >
+                            <table id="newCathegoryDiv">
+                                <tr>
+                                <td>WOMENS</td>
+                                <td>MENS</td>
+                                <td>KIDS</td>
+                                <td>SHOP ALL NEW</td>
+                                </tr>
+                            </table>
+            
+                            <table id="womensCathegoryDiv">
+                                <tr>
+                                <td>TOPS</td>
+                                <td>BOTTOMS</td>
+                                <td>DRESSES</td>
+                                <td>SHORTS</td>
+                                <td>JUMPSUITS+ROMPERS</td>
+                                <td>SETS</td>
+                                <td>DENIM</td>
+                                <td>OUTERWEAR</td>
+                                <td>SWIM</td>
+                                <td>ACTIVE</td>
+                                <td>SWEATERS</td>
+                                <td>INTIMATE+PJS</td>
+                                <td>ACCESSORIES</td>
+                                <td>FOOTWEAR</td>  
+                                </tr>
+                            </table>
+            
+                            <table id="mensCathegoryDiv">
+                                <tr>
+                                <td>TOPS</td>
+                                <td>BOTTOMS</td>
+                                <td>SHORTS</td>
+                                <td>HOODIES AND SWEATSHIRTS</td>
+                                <td>DENIM</td>
+                                <td>JOGGERS</td>
+                                <td>OUTWEAR</td>
+                                <td>SWEATERS</td>  
+                                <td>FOOTWEAR</td>
+                                <td>ACCESSORIES</td>
+                                <td>SHOP BY BRAND</td>
+                                </tr>
+                            </table>
+            
+                            <table id="girlsCathegoryDiv">
+                                <tr>
+                                    <td>BABY GIRL (0-24M)</td>
+                                    <td>YOUNG GIRL (2-14)</td>
+                                </tr>
+                            </table>
+                            <table id="boysCathegoryDiv">
+                                <tr>
+                                    <td>BABY BOY (0-24M)</td>
+                                    <td>YOUNG BOY (0-24M)</td>
+                                </tr>
+                            </table>
+            
+                            <table id="beautyCathegoryDiv">
+                                <tr>
+                                    <td>MAKEUP</td>
+                                    <td>TOOLS</td>
+                                    <td>NAILS</td>
+                                    <td>FRAGRANCE</td>
+                                </tr>
+                            </table>
+            
+                            <table id="homeCathegoryDiv">
+                                <tr>
+                                    <td>BAR+PARTY</td>
+                                    <td>KITCHEN</td>
+                                    <td>LIGHTING</td>
+                                    <td>BEDDING+PILLOWS</td>
+                                    <td>DECOR</td>
+                                    <td>STORAGE</td>
+                                    <td>ELECTRONICS</td>
+                                    <td>NOVELTY</td>  
+                                    <td>POOL PARTY</td>  
+                                </tr>
+                            </table>
+                            <table id="saleCathegoryDiv">
+                                <tr>
+                                <td>WOMEN</td>
+                                <td>MENS</td>
+                                <td>KIDS</td>
+                                <td>SHOP ALL SALE</td>
+                                </tr>
+                            </table>
+            
+                        </div>
+                </div>    
+
+
+
+    <div class="galleryOptions">
+
+        <ul class="listOptions colorBullets " >
+            <li onclick="setColorBulletsForList(this)" data-valueColor="black" id="black"> <span>Black</span> </li>
+            <li onclick="setColorBulletsForList(this)"data-valueColor="blue" id="blue"><span>Blue</span></li>
+            <li onclick="setColorBulletsForList(this)" data-valueColor="brown" id="brown"><span>Brown</span></li>
+            <li onclick="setColorBulletsForList(this)" data-valueColor="green" id="green"><span>Green</span></li>
+            <li onclick="setColorBulletsForList(this)" data-valueColor="grey" id="grey"><span>Grey</span></li>
+            <li onclick="setColorBulletsForList(this)"data-valueColor="pink" id="pink"><span>Pink</span></li>
+            <li onclick="setColorBulletsForList(this)"data-valueColor="red" id="red"><span>Red</span></li>
+            <li onclick="setColorBulletsForList(this)"data-valueColor="white" id="white"><span>White</span></li>
+            <li onclick="setColorBulletsForList(this)"data-valueColor="yellow" id="yellow"><span>Yellow</span></li>
+        </ul>
+
+        <ul class="listOptions">
+            <li data-valueSize="28">28</li>
+            <li data-valueSize="30">30</li>
+            <li data-valueSize="32">32</li>
+            <li data-valueSize="34">34</li>
+            <li data-valueSize="36">36</li>
+            <li data-valueSize="38">38</li>
+            <li data-valueSize="S/P">S/P</li>
+            <li data-valueSize="M">M</li>
+            <li data-valueSize="L\G">L\G</li>
+            <li data-valueSize="XL">XL</li>
+            <li data-valueSize="28X30">28x30</li>
+            <li data-valueSize="28X32">28x32</li>
+            <li data-valueSize="30X32">30x32</li>
+            <li data-valueSize="30X30">30x30</li>
+            <li data-valueSize="32X32">32x32</li>
+            <li data-valueSize="32X34">32x34</li>
+            <li data-valueSize="34X32">34x32</li>
+            <li data-valueSize="34X34">34x34</li>
+        </ul>
+
+
+        <ul class="listOptions">
+            <li data-valuePrice="10-25">$10-$25</li>
+            <li data-valuePrice="25-50">$25-$50</li>
+            <li data-valuePrice="50-75">$50-$75</li>
+        </ul>
+
+
+        <ul class="listOptions">
+            <li data-valueSort="popular">Most Popular</li>
+            <li data-valueSort="lowToHigh">Price low to high</li>
+            <li data-valueSort="highToLow">Price high to low</li>
+            <li data-valueSort="newFirst">Newest First</li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
