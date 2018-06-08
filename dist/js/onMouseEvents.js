@@ -1,3 +1,4 @@
+
 function btnSearch(buttonID)
 {   
 
@@ -25,22 +26,19 @@ for (i in clothingCategories)
 { 
      {
         $("#".concat(clothingCategories[i])).mouseover(function(){
-            
-            $(("#".concat(clothingCategories[i])).concat(" span")).css("border-bottom","2px solid black");
-            $(("#".concat(clothingCategories[i])).concat(" span")).css("padding-bottom","2px");
-            
+            $("#".concat(clothingCategories[i])).css("border-bottom","1px solid black");
+            $("#".concat(clothingCategories[i])).css("padding-bottom","5px");
+
+
             $("#".concat(clothingCategories[i],"Div")).css("display","block");
             $("#".concat(clothingCategories[i],"Div")).css("color","white");
             $(".cathegorySelection ").css("height", "30px");
-            $(".cathegorySelection ").css("background-color", "black");            
+            $(".cathegorySelection ").css("background-color", "black");
+            
+            
         });
 
         $("#".concat(clothingCategories[i])).mouseout(function(){
-
-            $(("#".concat(clothingCategories[i])).concat(" span")).css("border","none");
-            
-            
-
             $("#".concat(clothingCategories[i],"Div")).css("display", "none");
             $("#".concat(clothingCategories[i],"Div")).css("color","white");
             $(".cathegorySelection ").css("height", "unset");
@@ -55,9 +53,20 @@ for (i in clothingCategories)
 };
 
 
-function changeArrowDirection(changeME){
-
-            $(".displayColorSizePriceAndSortDIV div").removeClass("arrow-down").addClass("arrow-right")
-
+function changeArrowDirection(direction)
+{   var clicks = $(this).data('clicks');
+        $("#".concat(direction.id)).click(function() 
+        { 
+            if (clicks) 
+            {                 
+                $("#".concat(direction.id).concat (" .arrow-right")).removeClass("arrow-right");
+                $("#".concat(direction.id).concat (" div")).addClass("arrow-down");        
+            }
+            else 
+            {
+                $("#".concat(direction.id).concat (" .arrow-down")).removeClass("arrow-down");
+                $("#".concat(direction.id).concat (" div")).addClass("arrow-right");
+            }
+      });
+      $(this).data("clicks", !clicks);
 }
-

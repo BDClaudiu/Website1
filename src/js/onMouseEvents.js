@@ -28,9 +28,6 @@ for (i in clothingCategories)
         $("#".concat(clothingCategories[i])).mouseover(function(){
             $("#".concat(clothingCategories[i])).css("border-bottom","1px solid black");
             $("#".concat(clothingCategories[i])).css("padding-bottom","5px");
-
-
-
             
             $("#".concat(clothingCategories[i],"Div")).css("display","block");
             $("#".concat(clothingCategories[i],"Div")).css("color","white");
@@ -53,3 +50,22 @@ for (i in clothingCategories)
 }
 
 };
+
+
+function changeArrowDirection(direction)
+{   var clicks = $(this).data('clicks');
+        $("#".concat(direction.id)).click(function() 
+        { 
+            if (clicks) 
+            {                 
+                $("#".concat(direction.id).concat (" .arrow-right")).removeClass("arrow-right");
+                $("#".concat(direction.id).concat (" div")).addClass("arrow-down");        
+            }
+            else 
+            {
+                $("#".concat(direction.id).concat (" .arrow-down")).removeClass("arrow-down");
+                $("#".concat(direction.id).concat (" div")).addClass("arrow-right");
+            }
+      });
+      $(this).data("clicks", !clicks);
+}

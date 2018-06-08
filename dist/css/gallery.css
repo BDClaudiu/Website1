@@ -34,6 +34,33 @@
   height: 100%;
   border: 2px solid lightgray; }
 
+#color-1::before {
+  color: black; }
+
+#color-2::before {
+  color: blue; }
+
+#color-3::before {
+  color: brown; }
+
+#color-4::before {
+  color: green; }
+
+#color-5::before {
+  color: grey; }
+
+#color-6::before {
+  color: pink; }
+
+#color-7::before {
+  color: red; }
+
+#color-8::before {
+  color: white; }
+
+#color-9::before {
+  color: yellow; }
+
 .displayColorSizePriceAndSortDIV span {
   display: block;
   margin-left: 10px;

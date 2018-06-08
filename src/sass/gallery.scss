@@ -46,6 +46,19 @@ border: 2px solid lightgray;
     
 }
 
+//Clothing categories color buttons
+//For new categories, add new colors here
+$listColorButtons: black blue brown green grey pink red white yellow;
+@each $colors in $listColorButtons
+{ 
+  $i: index($listColorButtons, $colors );
+  #color-#{$i}::before
+    {
+      color: $colors;
+    }
+}
+
+
 .displayColorSizePriceAndSortDIV span{display: block;
   margin-left: 10px;
   margin-top:5px;
